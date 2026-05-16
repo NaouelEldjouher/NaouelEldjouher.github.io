@@ -7,7 +7,7 @@ I build robust, reproducible bioinformatics pipelines for genomic research, brid
 ### 🚀 Featured Engineering Publication
 
 I recently published a deep-dive architectural breakdown of my end-to-end cloud platform.
-* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](YOUR_LIVE_MEDIUM_LINK_HERE)
+* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7?postPublishedType=repub)
 
 ---
 
