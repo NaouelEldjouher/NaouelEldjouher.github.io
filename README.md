@@ -10,15 +10,17 @@
   code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px; }
 </style>
 Full-Stack Bioinformatician
-## 🧬 OmniDomain Build Logs
-{% for post in site.posts %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <p>{{ post.date | date: "%B %d, %Y" }}</p>
-  <p>{{ post.excerpt }}</p>
-{% endfor %}
-
 I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow. 
 
+## 🧬 OmniDomain Build Logs
+I'm building something new for me to follow my learning journey. 
+## Recent Build Notes
+{% for post in site.posts %}
+  <div class="post-preview">
+    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p>{{ post.date | date: "%B %d, %Y" }}</p>
+  </div>
+{% endfor %}
 
 
 
@@ -26,7 +28,7 @@ I specialize in plant and bacterial genomics, bridging high-throughput wet-lab i
 
 I recently published a deep-dive architectural breakdown of my end-to-end cloud platform.
 * 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7?postPublishedType=repub)
-* **Current Project:** [My OmniDomain Architecture Notes (Day 1)](blog/day-1-omnidomain.md)
+
 
 ---
 
