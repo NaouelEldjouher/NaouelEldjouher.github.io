@@ -14,11 +14,19 @@ Full-Stack Bioinformatician
 I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow. 
 
 ---
+### 🚀 Current Focus: OmniDomain
+**The Architecture of a Multi-Kingdom Genomic Platform**
+I am building a unified platform to consolidate my bacterial, fungal, and plant genomic pipelines into a single, scalable codebase. Instead of isolated one-off scripts, I am developing a shared "control plane" using Nextflow, AWS Batch, and Streamlit to treat infrastructure as a reusable utility.
+
+*   **Status:** Active Development (Day 1 Documentation)
+*   **Key Concept:** Shared infrastructure inheritance across prokaryotic and eukaryotic domains.
+*   **[Read the Build Notes & Architecture Breakdown](blog/day-1-omnidomain.md)**
 
 ### 🚀 Blog Post
 
 I recently published a deep-dive architectural breakdown of my end-to-end cloud platform.
 * 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7?postPublishedType=repub)
+* **Current Project:** [My OmniDomain Architecture Notes (Day 1)](blog/day-1-omnidomain.md)
 
 ---
 
