@@ -2,6 +2,7 @@
 layout: post
 title: "OmniDomain: Building a Multi-Kingdom Genomic Platform (Day 1)"
 date: 2026-05-20
+description: "An introduction to OmniDomain: Outlining the what the three core pipelines will consist of, and the main technical challenges I expect to face."
 ---
 
 # Blog Notes: Building OmniDomain (Day 1)
