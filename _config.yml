@@ -1,4 +1,7 @@
 title: Naouel's Portfolio
-theme: minima # You can change this to any theme you like
+theme: minima # You can change this to 'jekyll-theme-minimal' or others
 permalink: /:title/
 markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
