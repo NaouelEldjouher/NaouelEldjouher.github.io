@@ -15,8 +15,11 @@ I specialize in plant and bacterial genomics, bridging high-throughput wet-lab i
 ## 🧬 OmniDomain Build Logs
 I'm building something new for me to follow my learning journey. 
 {% for post in site.posts %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <p>{{ post.date | date: "%B %d, %Y" }}</p>
+  <div style="margin-bottom: 20px;">
+    <h3 style="margin-bottom: 5px;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <p style="font-size: 0.9em; color: #888; margin-top: 0; margin-bottom: 5px;">{{ post.date | date: "%B %d, %Y" }}</p>
+    <p style="margin-top: 0;"><em>{{ post.description }}</em></p>
+  </div>
 {% endfor %}
 
 
