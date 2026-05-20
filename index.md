@@ -12,13 +12,39 @@
 Full-Stack Bioinformatician
 I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow. 
 
+<style>
+  .note-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+  .note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  .note-title { font-weight: bold; color: #e0e0e0; margin: 0; font-size: 1.1em; }
+  .note-date { color: #81a1c1; font-size: 0.85em; }
+</style>
+
 ## 🧬 OmniDomain Build Logs
-I'm building something new for me to follow my learning journey. 
-{% for post in site.posts %}
-  <div style="margin-bottom: 20px;">
-    <h3 style="margin-bottom: 5px;"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    <p style="font-size: 0.9em; color: #888; margin-top: 0; margin-bottom: 5px;">{{ post.date | date: "%B %d, %Y" }}</p>
-    <p style="margin-top: 0;"><em>{{ post.description }}</em></p>
+*I am building in public. These are my daily architectural notes and challenges.*
+
+{% for post in site.posts limit:10 %}
+  <div class="note-card">
+    <div class="note-header">
+      <span class="note-title">{{ post.title }}</span>
+      <span class="note-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    </div>
+    <div style="font-size: 0.95em; line-height: 1.5;">
+      {{ post.content }}
+    </div>
   </div>
 {% endfor %}
 
