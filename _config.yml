@@ -1,0 +1,4 @@
+title: Naouel's Portfolio
+theme: minima # You can change this to any theme you like
+permalink: /:title/
+markdown: kramdown
