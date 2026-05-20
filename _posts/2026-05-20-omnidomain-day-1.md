@@ -2,7 +2,7 @@
 layout: post
 title: "OmniDomain: Building a Multi-Kingdom Genomic Platform (Day 1)"
 date: 2026-05-20
-description: "An introduction to OmniDomain: Outlining the what the three core pipelines will consist of, and the main technical challenges I expect to face."
+description: "An introduction to OmniDomain: Outlining what the three core pipelines will consist of, and the main technical challenges I expect to face."
 ---
 
 # Blog Notes: Building OmniDomain (Day 1)
@@ -41,7 +41,9 @@ I am using my **NextAMR** pipeline as the foundation, porting its engine—globa
 
 ### The Learning Curve
 Designing an `nf-core` module system flexible enough to handle bacterial binning while remaining robust enough for complex plant assemblies is a significant architectural challenge. Coming from a bacterial-focused background, scaling my logic to the eukaryotic domain—where genome sizes and repeat content require drastically different computational approaches—is my biggest hurdle.
+
 ---
+
 ### What's Next?
 I’ve started the **Technical Design Document (TDD)** to map out the infrastructure. Future notes will cover:
 1.  **Nextflow Architecture:** Folder structures and module scopes.
@@ -51,6 +53,5 @@ I’ve started the **Technical Design Document (TDD)** to map out the infrastruc
 I’m "learning in public." The goal isn't perfection, but building a system I can actually maintain.
 
 **Follow the progress:** [github.com/NaouelEldjouher](https://github.com/NaouelEldjouher)
-
 
 
