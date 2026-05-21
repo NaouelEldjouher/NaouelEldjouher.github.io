@@ -85,4 +85,4 @@ I recently published a deep-dive architectural breakdown of my end-to-end cloud 
 
 * 💼 **LinkedIn:** [linkedin.com/in/naoueleldjouher](https://linkedin.com/in/naoueleldjouher)
 * 🐙 **GitHub Profile:** [github.com/NaouelEldjouher](https://github.com/NaouelEldjouher)
-* 📧 **Email:** [hellonaouel@gmail.com](mailto:hellonaouel@gmail.com)
+* 📧 **Email:** [hellonaouel[at]gmail.com]
