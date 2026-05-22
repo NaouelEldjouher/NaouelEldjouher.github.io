@@ -1,6 +1,8 @@
+layout: post
 title: "Designing the Nextflow repository structure"
 date: 2026-05-22
-tags: [nextflow, architecture, omniDomain]
+tags: [nextflow, aws, architecture, omniDomain]
+---
 Three pipelines. One repo. The structure determines everything.
 Each pipeline gets its own main.nf and modules.config.
 One global nextflow.config handles profiles, resource limits,
