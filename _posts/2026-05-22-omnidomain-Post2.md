@@ -1,3 +1,4 @@
+---
 layout: post
 title: "Designing the Nextflow repository structure"
 date: 2026-05-22
