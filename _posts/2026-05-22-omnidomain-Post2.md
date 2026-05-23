@@ -14,5 +14,6 @@ and shared params.
 Same rule for subworkflows. `shared/repeat_masking` runs 
 For example: RepeatModeler + RepeatMasker for both FungalFlow and PhytoFlow.
 **Write once. Both inherit it.**
+
 ---
 [github.com/NaouelEldjouher](https://github.com/NaouelEldjouher)
