@@ -15,5 +15,6 @@ Current status:
 * **🍄 FungalFlow**  fungal assembly + BGC detection (building)
 * **🌱 PhytoFlow**  plant HiFi assembly + annotation (architecting)
 * **🧬 Metacflow**  bacterial metagenomics (v2.0)
+
 ---
 
