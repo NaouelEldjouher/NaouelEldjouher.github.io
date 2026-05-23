@@ -11,8 +11,8 @@ and shared params.
 ### Modules follow one rule:
 **Used by one pipeline** → `modules/local/{pipeline}/`
 **Used by two or more** → `modules/local/shared/`
-Same rule for subworkflows. `shared/repeat_masking` runs 
-For example: RepeatModeler + RepeatMasker for both FungalFlow and PhytoFlow.
+Same rule for subworkflows. `shared/repeat_masking` runs For example: RepeatModeler + RepeatMasker for both FungalFlow and PhytoFlow.
+
 **Write once. Both inherit it.**
 
 ---
