@@ -64,7 +64,8 @@ I specialize in plant and bacterial genomics, bridging high-throughput wet-lab i
 ### 🚀 Blog Post
 
 I recently published a deep-dive architectural breakdown of my end-to-end cloud platform.
-* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7)
+* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7?postPublishedType=repub)
+
 
 ---
 
@@ -79,7 +80,7 @@ I recently published a deep-dive architectural breakdown of my end-to-end cloud 
 #### 🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline
 *M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation*
 * **Reproducible Workflows:** Built an end-to-end bacterial genomics workflow to automate quality control, short/long-read hybrid assembly, and downstream annotation.
-* **Academic Foundations:** Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen. (Record: [Zenodo 10.5281/zenodo.14995561](https://zenodo.org/records/14995561))
+* **Academic Foundations:** Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen.(Record: [Zenodo 10.5281/zenodo.14995561](https://zenodo.org/records/14995561)
 
 ---
 
@@ -93,3 +94,7 @@ I recently published a deep-dive architectural breakdown of my end-to-end cloud 
 
 ### 📫 Connect With Me
 
+* 💼 **LinkedIn:** [linkedin.com/in/naoueleldjouher](https://linkedin.com/in/naoueleldjouher)
+* 🐙 **GitHub Profile:** [github.com/NaouelEldjouher](https://github.com/NaouelEldjouher)
+* 📧 **Email:** [hellonaouel[at]gmail.com]
+* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-
