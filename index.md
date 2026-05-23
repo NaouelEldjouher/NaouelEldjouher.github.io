@@ -9,50 +9,49 @@
   hr { border-color: #333 !important; }
   code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px; }
   
-  /* --- The Horizontal Slider Container --- */
-  .log-slider {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    /* Smooth scrolling and snapping */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Customizing the scrollbar to look sleek and dark */
-  .log-slider::-webkit-scrollbar { height: 8px; }
-  .log-slider::-webkit-scrollbar-track { background: #1a1a1a; border-radius: 10px; }
-  .log-slider::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
-  .log-slider::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
-
-  /* --- Log Card Styling (Fixed Width for Slider) --- */
-  .note-card {
-    flex: 0 0 320px; /* Forces cards to stay side-by-side at a fixed width */
-    scroll-snap-align: start; /* Snaps beautifully into view when scrolling */
-    background-color: #1e1e1e;
+  /* --- The Big Master Rectangle (Strictly Vertical) --- */
+  .feed-container {
+    background-color: #1a1a1a;
     border: 1px solid #333;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: transform 0.2s ease, border-color 0.2s ease;
-    display: flex;
-    flex-direction: column;
+    max-height: 450px; 
+    overflow-y: auto;   /* YES to vertical scroll */
+    overflow-x: hidden; /* NO to horizontal scroll */
+    box-sizing: border-box; /* Keeps padding inside the box */
+    word-wrap: break-word; /* Prevents long URLs from stretching the box */
+    padding: 0 25px;
+    margin-bottom: 30px;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
   }
-  .note-card:hover {
-    transform: translateY(-2px);
-    border-color: #4CAF50; 
-  }
-  .note-header {
+
+  /* Custom Vertical Scrollbar Styling */
+  .feed-container::-webkit-scrollbar { width: 8px; }
+  .feed-container::-webkit-scrollbar-track { background: #1a1a1a; margin: 10px 0; border-radius: 10px; }
+  .feed-container::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+  .feed-container::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
+
+  /* --- Individual Log Entries --- */
+  .feed-item {
+    padding: 25px 0;
     border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    display: block; /* Ensures they stack on top of each other */
   }
-  .note-title { display: block; font-weight: bold; color: #ffffff; margin: 0 0 5px 0; font-size: 1.15em; line-height: 1.3; }
-  .note-date { color: #888888; font-size: 0.85em; display: block; }
-  .note-body { font-size: 0.95em; line-height: 1.6; color: #cccccc; flex-grow: 1; }
-  .read-more { display: inline-block; margin-top: 15px; color: #4CAF50 !important; font-weight: 600; font-size: 0.9em; }
+  .feed-item:last-child {
+    border-bottom: none; 
+  }
+  
+  .feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .feed-title { font-weight: bold; color: #ffffff; margin: 0; font-size: 1.15em; }
+  .feed-date { color: #888888; font-size: 0.85em; }
+  .feed-body { font-size: 0.95em; line-height: 1.6; color: #cccccc; }
+  
+  .read-more { display: inline-block; margin-top: 12px; color: #4CAF50 !important; font-weight: 600; font-size: 0.9em; }
   .read-more:hover { color: #81C784 !important; }
 </style>
 
@@ -64,14 +63,14 @@ I specialize in plant and bacterial genomics, bridging high-throughput wet-lab i
 ## 🧬 OmniDomain Build Logs
 *I am building in public. These are my daily architectural notes and challenges.*
 
-<div class="log-slider">
+<div class="feed-container">
   {% for post in site.posts limit:10 %}
-    <div class="note-card">
-      <div class="note-header">
-        <span class="note-title">{{ post.title }}</span>
-        <span class="note-date">{{ post.date | date: "%b %d, %Y" }}</span>
+    <div class="feed-item">
+      <div class="feed-header">
+        <span class="feed-title">{{ post.title }}</span>
+        <span class="feed-date">{{ post.date | date: "%b %d, %Y" }}</span>
       </div>
-      <div class="note-body">
+      <div class="feed-body">
         {{ post.excerpt | strip_html | truncatewords: 35 }}
       </div>
       <a href="{{ post.url | relative_url }}" class="read-more">Read full log &rarr;</a>
