@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Post 2:Case 1 Phytoflow Validates"
+title: "Post 2: Case 1 Phytoflow Validates"
 date: 2026-05-22
 tags: [nextflow, aws, architecture, omniDomain]
 ---
