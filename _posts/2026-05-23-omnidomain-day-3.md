@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "Post 2: Case 1 Phytoflow Validates"
+title: "Post 2: First HiFi Assembly: A Complete Chloroplast"
 date: 2026-05-22
 tags: [nextflow, aws, architecture, omniDomain]
 ---
-## First HiFi Assembly: A Complete Chloroplast
-
 Stub tests on PhytoFlow and FungalFlow caught architecture bugs early — 
 Nextflow 26 breaking changes, a params block in the wrong config file, 
 a Groovy reserved keyword. Fixed before any real data ran.
