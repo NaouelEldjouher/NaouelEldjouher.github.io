@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Designing the Nextflow repository structure"
+date: 2026-05-22
+tags: [nextflow, aws, architecture, omniDomain]
+---
 ## First HiFi Assembly: A Complete Chloroplast
 
 Stub tests on PhytoFlow and FungalFlow caught architecture bugs early — 
