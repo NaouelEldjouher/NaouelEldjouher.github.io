@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Designing the Nextflow repository structure"
+title: "Post 2:Designing the Nextflow repository structure"
 date: 2026-05-22
 tags: [nextflow, aws, architecture, omniDomain]
 ---
