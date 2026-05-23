@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Post 2: First HiFi Assembly: A Complete Chloroplast"
-date: 2026-05-22
+date: 2026-05-23
 tags: [nextflow, aws, architecture, omniDomain]
 ---
 Stub tests on PhytoFlow and FungalFlow caught architecture bugs early — 
