@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Designing the Nextflow repository structure"
+title: "Post 2:Case 1 Phytoflow Validates"
 date: 2026-05-22
 tags: [nextflow, aws, architecture, omniDomain]
 ---
@@ -16,5 +16,5 @@ expected size. The metrics reflected the biology exactly — high coverage
 with zero MapQ on the inverted repeats, 0% BUSCO because every BUSCO 
 gene is nuclear-encoded.
 
-The user selects the genome type `--genome_type organelle` and the pipeline automatically skips Helixer, MAKER, and NLR-Annotator. 
+The user selects the genome type --genome_type organelle and the pipeline automatically skips Helixer, MAKER, and NLR-Annotator. 
 Next: nuclear genome.
