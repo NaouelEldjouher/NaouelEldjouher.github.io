@@ -214,16 +214,53 @@ title: Naouel Eldjouher
 <hr>
 
 <div class="section">
-  <div class="section-title">📫 Connect With Me</div>
+  <div class="section-title">🛠️ Tools & Technologies I Work With</div>
   <div style="margin-top:16px;">
-    <ul class="connect-list">
-      <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher">linkedin.com/in/naoueleldjouher</a></li>
-      <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher">github.com/NaouelEldjouher</a></li>
-      <li>📧 <strong>Email:</strong> <a href="mailto:hellonaouel[at]gmail.com">hellonaouel[at]gmail.com</a></li>
-      <li>📖 <strong>Medium:</strong> <a href="https://medium.com/@NaouelEldjouher">medium</a></li>
+    <ul class="tools-list">
+      <li><strong>Bacterial Genomics:</strong> De novo & hybrid assembly · Genome annotation · AMR gene detection & profiling · Metagenomics</li>
+      <li><strong>Fungal Genomics:</strong> Genome assembly & structural annotation · BGC detection · CAZyme profiling · Secretome prediction</li>
+      <li><strong>Plant Genomics:</strong> HiFi organelle & nuclear assembly · Repeat masking · Gene prediction · NLR resistance gene identification · Comparative genomics</li>
+      <li><strong>Workflow & Cloud:</strong> Nextflow DSL2 · AWS Batch · S3 · EC2 Spot · Terraform · Docker · Slurm HPC · Bash</li>
+      <li><strong>Data & Dev:</strong> Python · R (Tidyverse) · SQL · Pandas · Streamlit · Git</li>
     </ul>
   </div>
 </div>
+
+<hr>
+
+<div class="section">
+  <div class="section-title">📫 Connect With Me</div>
+  <div style="margin-top:16px;">
+    <ul class="connect-list">
+      <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher" target="_blank">linkedin.com/in/naoueleldjouher</a></li>
+      <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher" target="_blank">github.com/NaouelEldjouher</a></li>
+      <li>📖 <strong>Medium:</strong> <a href="https://medium.com/@NaouelEldjouher" target="_blank">medium</a></li>
+      <li>📧 <strong>Email:</strong> 
+        <a href="#reveal" id="secure-link">Click to reveal email</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const emailLink = document.getElementById('secure-link');
+  
+  if (emailLink) {
+    const revealEmail = (e) => {
+      const user = "hello";
+      const domain = "naouel.dev";
+      const fullEmail = `${user}@${domain}`;
+      emailLink.href = `mailto:${fullEmail}`;
+      emailLink.removeEventListener('click', revealEmail);
+      emailLink.removeEventListener('mouseenter', revealEmail);
+    };
+
+    emailLink.addEventListener('click', revealEmail);
+    emailLink.addEventListener('mouseenter', revealEmail);
+  }
+});
+</script>
 
 </body>
 </html>
