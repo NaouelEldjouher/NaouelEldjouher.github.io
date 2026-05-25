@@ -1,4 +1,4 @@
-<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}?v=2">
 
 <style>
   body {
