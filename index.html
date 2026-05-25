@@ -235,31 +235,41 @@ title: Naouel Eldjouher
       <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher" target="_blank">linkedin.com/in/naoueleldjouher</a></li>
       <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher" target="_blank">github.com/NaouelEldjouher</a></li>
       <li>📖 <strong>Medium:</strong> <a href="https://medium.com/@NaouelEldjouher" target="_blank">medium</a></li>
+      
       <li>📧 <strong>Email:</strong> 
-        <a href="#reveal" id="secure-link">Click to reveal email</a>
+        <a href="#protected" id="secure-link" class="email-protect">
+          contact<span>-remove-this-bot-</span>@naouel.dev
+        </a>
       </li>
     </ul>
   </div>
 </div>
 
-<script>
-window.addEventListener('DOMContentLoaded', () => {
-  const emailLink = document.getElementById('secure-link');
-  
-  if (emailLink) {
-    const revealEmail = (e) => {
-      const user = "contact";
-      const domain = "naouel.dev";
-      const fullEmail = `${user}@${domain}`;
-      emailLink.href = `mailto:${fullEmail}`;
-      emailLink.removeEventListener('click', revealEmail);
-      emailLink.removeEventListener('mouseenter', revealEmail);
-    };
-
-    emailLink.addEventListener('click', revealEmail);
-    emailLink.addEventListener('mouseenter', revealEmail);
+<style>
+  .email-protect span {
+    display: none;
   }
-});
+</style>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const emailLink = document.getElementById('secure-link');
+    
+    if (emailLink) {
+      const revealEmail = (e) => {
+        const user = "contact";
+        const domain = "naouel.dev";
+        
+        emailLink.href = `mailto:${user}@${domain}`;
+        
+        emailLink.removeEventListener('click', revealEmail);
+        emailLink.removeEventListener('mouseenter', revealEmail);
+      };
+
+      emailLink.addEventListener('click', revealEmail);
+      emailLink.addEventListener('mouseenter', revealEmail); 
+    }
+  });
 </script>
 
 </body>
