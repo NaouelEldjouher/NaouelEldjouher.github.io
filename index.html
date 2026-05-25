@@ -2,167 +2,238 @@
 layout: none
 title: Naouel Eldjouher
 ---
-<link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}?v=2">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naouel Eldjouher — Full-Stack Bioinformatician</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<style>
-  body {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  }
-  a { color: #81a1c1 !important; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  hr { border-color: #333 !important; }
-  code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px; }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 28px 80px;
+      line-height: 1.7;
+    }
 
-  .feed-container {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 8px;
-    max-height: 450px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    padding: 0 25px;
-    margin-bottom: 30px;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
-  }
-  .feed-container::-webkit-scrollbar { width: 8px; }
-  .feed-container::-webkit-scrollbar-track { background: #1a1a1a; margin: 10px 0; border-radius: 10px; }
-  .feed-container::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
-  .feed-container::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
+    a { color: #81a1c1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr { border: none; border-top: 1px solid #333; margin: 48px 0; }
+    code { background-color: #2e3440; color: #eceff4; padding: 2px 6px; border-radius: 4px; }
 
-  .feed-item {
-    padding: 25px 0;
-    border-bottom: 1px solid #333;
-    display: block;
-  }
-  .feed-item:last-child { border-bottom: none; }
-  .feed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-  }
-  .feed-title { font-weight: bold; color: #ffffff; margin: 0; font-size: 1.15em; }
-  .feed-date { color: #888888; font-size: 0.85em; }
-  .feed-body { font-size: 0.95em; line-height: 1.6; color: #cccccc; }
-  .read-more { display: inline-block; margin-top: 12px; color: #4CAF50 !important; font-weight: 600; font-size: 0.9em; }
-  .read-more:hover { color: #81C784 !important; }
+    h2 { color: #ffffff; font-size: 1.3em; margin-bottom: 6px; }
+    h3 { color: #ffffff; font-size: 1.15em; margin: 0 0 16px 0; }
+    h4 { color: #ffffff; font-size: 1.05em; margin: 0 0 4px 0; }
 
-  .project-card {
-    background-color: #1a1a1a;
-    border: 1px solid #333;
-    border-radius: 8px;
-    padding: 24px 28px;
-    margin-bottom: 20px;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
-  }
-  .project-card h4 { color: #ffffff; margin: 0 0 6px 0; font-size: 1.1em; }
-  .project-card .stack { color: #888; font-size: 0.82em; margin-bottom: 14px; font-style: italic; }
-  .project-card ul { margin: 0; padding-left: 20px; }
-  .project-card ul li { margin-bottom: 8px; font-size: 0.95em; line-height: 1.6; color: #cccccc; }
-  .project-card ul li strong { color: #e0e0e0; }
-  .current-badge {
-    display: inline-block;
-    background-color: #1b3a1f;
-    color: #4CAF50;
-    font-size: 0.72em;
-    font-weight: 600;
-    padding: 2px 10px;
-    border-radius: 20px;
-    border: 1px solid #4CAF50;
-    margin-bottom: 10px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+    .intro { margin-bottom: 48px; }
+    .intro strong { color: #ffffff; font-size: 1.1em; }
+    .intro p { margin-top: 8px; color: #cccccc; }
 
-  .connect-list { list-style: none; padding: 0; }
-  .connect-list li { padding: 6px 0; font-size: 0.97em; }
-</style>
+    /* FEED */
+    .section { margin-bottom: 48px; }
+    .section-title { color: #ffffff; font-size: 1.3em; margin-bottom: 4px; }
+    .section-sub { color: #888; font-size: 0.88em; margin-bottom: 20px; font-style: italic; }
 
-**Full-Stack Bioinformatician**
-I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.
+    .feed-container {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      max-height: 450px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      box-sizing: border-box;
+      word-wrap: break-word;
+      padding: 0 25px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .feed-container::-webkit-scrollbar { width: 8px; }
+    .feed-container::-webkit-scrollbar-track { background: #1a1a1a; margin: 10px 0; border-radius: 10px; }
+    .feed-container::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+    .feed-container::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
 
----
+    .feed-item { padding: 25px 0; border-bottom: 1px solid #333; display: block; }
+    .feed-item:last-child { border-bottom: none; }
+    .feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .feed-title { font-weight: bold; color: #ffffff; margin: 0; font-size: 1.05em; }
+    .feed-date { color: #888888; font-size: 0.85em; white-space: nowrap; margin-left: 16px; }
+    .feed-body { font-size: 0.93em; line-height: 1.6; color: #cccccc; }
+    .read-more { display: inline-block; margin-top: 12px; color: #4CAF50; font-weight: 600; font-size: 0.9em; }
+    .read-more:hover { color: #81C784; }
 
-## 🧬 OmniDomain Build Logs
-*I am building in public. These are my daily architectural notes and challenges.*
+    /* PROJECTS */
+    .project-card {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .project-card .stack { color: #888; font-size: 0.82em; margin-bottom: 14px; font-style: italic; }
+    .project-card ul { margin: 0; padding-left: 20px; }
+    .project-card ul li { margin-bottom: 8px; font-size: 0.93em; line-height: 1.6; color: #cccccc; }
+    .project-card ul li strong { color: #e0e0e0; }
+    .current-badge {
+      display: inline-block;
+      background-color: #1b3a1f;
+      color: #4CAF50;
+      font-size: 0.7em;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 20px;
+      border: 1px solid #4CAF50;
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
 
-<div class="feed-container">
-  {% for post in site.posts limit:10 %}
+    /* TOOLS */
+    .tools-list { list-style: none; padding: 0; }
+    .tools-list li { padding: 6px 0; border-bottom: 1px solid #222; font-size: 0.93em; color: #cccccc; }
+    .tools-list li:last-child { border-bottom: none; }
+    .tools-list li strong { color: #e0e0e0; }
+
+    /* CONNECT */
+    .connect-list { list-style: none; padding: 0; }
+    .connect-list li { padding: 6px 0; font-size: 0.95em; }
+    .connect-list li strong { color: #e0e0e0; }
+
+    .blog-box {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 20px 24px;
+      box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .blog-box p { margin: 0; font-size: 0.93em; color: #cccccc; }
+  </style>
+</head>
+<body>
+
+<div class="intro">
+  <strong>Full-Stack Bioinformatician</strong>
+  <p>I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.</p>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-title">🧬 OmniDomain Build Logs</div>
+  <div class="section-sub">I am building in public. These are my daily architectural notes and challenges.</div>
+  <div class="feed-container">
     <div class="feed-item">
       <div class="feed-header">
-        <span class="feed-title">{{ post.title }}</span>
-        <span class="feed-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <span class="feed-title">Post 3: First HiFi Assembly — A Complete Chloroplast</span>
+        <span class="feed-date">May 23, 2026</span>
       </div>
-      <div class="feed-body">
-        {{ post.excerpt | strip_html | truncatewords: 35 }}
-      </div>
-      <a href="{{ post.url | relative_url }}" class="read-more">Read full log &rarr;</a>
+      <div class="feed-body">Stub tests on PhytoFlow and FungalFlow caught architecture bugs early — Nextflow 26 breaking changes, a params block in the wrong config file, a Groovy reserved keyword. Fixed before any real data ran.</div>
+      <a href="/2026-05-23-omnidomain-day-3/" class="read-more">Read full log &rarr;</a>
     </div>
-  {% endfor %}
+    <div class="feed-item">
+      <div class="feed-header">
+        <span class="feed-title">Post 2: Designing the Nextflow Repository Structure</span>
+        <span class="feed-date">May 22, 2026</span>
+      </div>
+      <div class="feed-body">Three pipelines. One repo. The structure determines everything. Each pipeline gets its own main.nf and modules.config. One global nextflow.config handles profiles, resource limits and shared params.</div>
+      <a href="/2026-05-22-omnidomain-Post2/" class="read-more">Read full log &rarr;</a>
+    </div>
+    <div class="feed-item">
+      <div class="feed-header">
+        <span class="feed-title">Post 1: The OmniDomain Blueprint</span>
+        <span class="feed-date">May 20, 2026</span>
+      </div>
+      <div class="feed-body">After finishing NextAMR, I'm expanding to fungi and plants. OmniDomain is a unified Nextflow + AWS Batch platform for bacterial, fungal, and plant genomics — one shared infrastructure, three pipeline engines.</div>
+      <a href="/2026-05-20-omnidomain-day-1/" class="read-more">Read full log &rarr;</a>
+    </div>
+  </div>
 </div>
 
----
+<hr>
 
-### 🚀 Blog Post
+<div class="section">
+  <div class="section-title">🚀 Blog Post</div>
+  <div style="margin-top: 16px;">
+  <div class="blog-box">
+    <p>📖 <strong>Read on Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS</a></p>
+  </div>
+  </div>
+</div>
 
-I recently published a deep-dive architectural breakdown of my end-to-end cloud platform.
-* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://naouel.dev/nextamr)
+<hr>
 
----
+<div class="section">
+  <div class="section-title">💻 Projects</div>
+  <div style="margin-top: 20px;">
 
-### 💻 Projects
+  <div class="project-card">
+    <span class="current-badge">Current Project</span>
+    <h4>🌐 OmniDomain — Multi-Kingdom Cloud Genomics Platform</h4>
+    <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
+    <ul>
+      <li><strong>Unified Infrastructure:</strong> One shared AWS Batch setup, Terraform, and Streamlit UI powering three pipeline engines — NextAMR, FungalFlow, and PhytoFlow.</li>
+      <li><strong>Multi-Kingdom:</strong> Bacterial WGS & AMR detection, fungal genome assembly & BGC discovery, and HiFi-first plant genome assembly from a single codebase.</li>
+      <li><strong>Validated:</strong> Assembled a complete <em>Arabidopsis</em> chloroplast — 155,667 bp, 0 gaps, 100.8% expected size — from 12,745 PacBio HiFi reads.</li>
+      <li><strong>BYOC Model:</strong> All compute runs in your AWS account. The platform provides the pipelines and infrastructure code — you own the compute.</li>
+      <li>🐙 <strong>Code:</strong> <a href="https://github.com/NaouelEldjouher/OmniDomain">Explore the OmniDomain Repository on GitHub</a></li>
+    </ul>
+  </div>
 
-<div class="project-card">
-  <span class="current-badge">Current Project</span>
-  <h4>🌐 OmniDomain — Multi-Kingdom Cloud Genomics Platform</h4>
-  <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
-  <ul>
-    <li><strong>Unified Infrastructure:</strong> One shared AWS Batch setup, Terraform, and Streamlit UI powering three pipeline engines — NextAMR, FungalFlow, and PhytoFlow.</li>
-    <li><strong>Multi-Kingdom:</strong> Bacterial WGS & AMR detection, fungal genome assembly & BGC discovery, and HiFi-first plant genome assembly from a single codebase.</li>
-    <li><strong>Validated:</strong> Assembled a complete <em>Arabidopsis</em> chloroplast — 155,667 bp, 0 gaps, 100.8% expected size — from 12,745 PacBio HiFi reads.</li>
-    <li><strong>BYOC Model:</strong> All compute runs in your AWS account. The platform provides the pipelines and infrastructure code — you own the compute.</li>
-    <li>🐙 <strong>Code:</strong> <a href="https://github.com/NaouelEldjouher/OmniDomain">Explore the OmniDomain Repository on GitHub</a></li>
+  <div class="project-card">
+    <h4>🦠 NextAMR (AMR-Flow) — Cloud-Native Bacterial Genome Assembly & AMR Profiling</h4>
+    <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
+    <ul>
+      <li><strong>Automated Cloud Infrastructure:</strong> Provisioned an event-driven AWS architecture using Terraform (IaC) to handle automated job submission via AWS Batch.</li>
+      <li><strong>Cost Efficiency & Portability:</strong> Optimized cloud spend by leveraging EC2 Spot instances and containerized the entire pipeline using Docker for cross-platform reproducibility.</li>
+      <li>🐙 <strong>Code & Architecture:</strong> <a href="https://github.com/NaouelEldjouher/NextAMR">Explore the NextAMR Repository on GitHub</a></li>
+    </ul>
+  </div>
+
+  <div class="project-card">
+    <h4>🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline</h4>
+    <div class="stack">M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation</div>
+    <ul>
+      <li><strong>Reproducible Workflows:</strong> Built an end-to-end bacterial genomics workflow to automate quality control, short/long-read hybrid assembly, and downstream annotation.</li>
+      <li><strong>Academic Foundations:</strong> Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen. (Record: <a href="https://zenodo.org/records/14995561">Zenodo 10.5281/zenodo.14995561</a>)</li>
+    </ul>
+  </div>
+
+  </div>
+</div>
+
+<hr>
+
+<div class="section">
+  <div class="section-title">🛠️ Tools & Technologies I Work With</div>
+  <div style="margin-top: 16px;">
+  <ul class="tools-list">
+    <li><strong>Bioinformatics:</strong> NGS Data Analysis, Plant & Bacterial Genomics, AMR Profiling, GATK Best Practices, Variant Calling, FastP, Unicycler, Bakta</li>
+    <li><strong>Workflow & Cloud:</strong> Nextflow DSL2, AWS (Batch, S3, EC2), Terraform (Infrastructure as Code), Docker, Bash scripting, Slurm HPC</li>
+    <li><strong>Data Science:</strong> Python, R (Tidyverse), SQL, Pandas</li>
   </ul>
+  </div>
 </div>
 
-<div class="project-card">
-  <h4>🦠 NextAMR (AMR-Flow) — Cloud-Native Bacterial Genome Assembly & AMR Profiling</h4>
-  <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
-  <ul>
-    <li><strong>Automated Cloud Infrastructure:</strong> Provisioned an event-driven AWS architecture using Terraform (IaC) to handle automated job submission via AWS Batch.</li>
-    <li><strong>Cost Efficiency & Portability:</strong> Optimized cloud spend by leveraging EC2 Spot instances and containerized the entire pipeline using Docker for cross-platform reproducibility.</li>
-    <li>🐙 <strong>Code & Architecture:</strong> <a href="https://github.com/NaouelEldjouher/NextAMR">Explore the NextAMR Repository on GitHub</a></li>
+<hr>
+
+<div class="section">
+  <div class="section-title">📫 Connect With Me</div>
+  <div style="margin-top: 16px;">
+  <ul class="connect-list">
+    <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher">linkedin.com/in/naoueleldjouher</a></li>
+    <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher">github.com/NaouelEldjouher</a></li>
+    <li>📧 <strong>Email:</strong> <a href="mailto:hellonaouel@gmail.com">hellonaouel@gmail.com</a></li>
+    <li>📖 <strong>Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud</a></li>
   </ul>
+  </div>
 </div>
 
-<div class="project-card">
-  <h4>🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline</h4>
-  <div class="stack">M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation</div>
-  <ul>
-    <li><strong>Reproducible Workflows:</strong> Built an end-to-end bacterial genomics workflow to automate quality control, short/long-read hybrid assembly, and downstream annotation.</li>
-    <li><strong>Academic Foundations:</strong> Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen. (Record: <a href="https://zenodo.org/records/14995561">Zenodo 10.5281/zenodo.14995561</a>)</li>
-  </ul>
-</div>
-
----
-
-### 🛠️ Tools & Technologies I Work With
-
-* **Bioinformatics:** NGS Data Analysis, Plant & Bacterial Genomics, AMR Profiling, GATK Best Practices, Variant Calling, FastP, Unicycler, Bakta
-* **Workflow & Cloud:** Nextflow DSL2, AWS (Batch, S3, EC2), Terraform (Infrastructure as Code), Docker, Bash scripting, Slurm HPC
-* **Data Science:** Python, R (Tidyverse), SQL, Pandas
-
----
-
-### 📫 Connect With Me
-
-<ul class="connect-list">
-  <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher">linkedin.com/in/naoueleldjouher</a></li>
-  <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher">github.com/NaouelEldjouher</a></li>
-  <li>📧 <strong>Email:</strong> <a href="mailto:hellonaouel@gmail.com">hellonaouel@gmail.com</a></li>
-  <li>📖 <strong>Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud</a></li>
-</ul>
+</body>
+</html>
