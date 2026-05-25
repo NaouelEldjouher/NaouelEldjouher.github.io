@@ -12,39 +12,27 @@ title: Naouel Eldjouher
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    ... all your styles ...
-  </style>
-</head>
-<body>
-
-<div class="intro" style="display:flex; align-items:center; gap:28px; margin-bottom:48px;">
-  <img src="/profile.png" alt="Naouel Eldjouher"
-    style="width:110px; height:110px; border-radius:50%; object-fit:cover; border:2px solid #333; flex-shrink:0;">
-  <div>
-    <h1 style="color:#ffffff; font-size:1.8em; font-weight:600; margin-bottom:8px;">Naouel Eldjouher</h1>
-    <strong style="color:#4CAF50;">Full-Stack Bioinformatician</strong>
-    <p style="margin-top:8px; color:#cccccc;">I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.</p>
-  </div>
-</div>
-
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 48px 28px 80px;
+      line-height: 1.7;
+    }
     a { color: #81a1c1; text-decoration: none; }
     a:hover { text-decoration: underline; }
     hr { border: none; border-top: 1px solid #333; margin: 48px 0; }
     code { background-color: #2e3440; color: #eceff4; padding: 2px 6px; border-radius: 4px; }
-
     h2 { color: #ffffff; font-size: 1.3em; margin-bottom: 6px; }
     h3 { color: #ffffff; font-size: 1.15em; margin: 0 0 16px 0; }
     h4 { color: #ffffff; font-size: 1.05em; margin: 0 0 4px 0; }
-
     .intro { margin-bottom: 48px; }
-    .intro strong { color: #ffffff; font-size: 1.1em; }
-    .intro p { margin-top: 8px; color: #cccccc; }
-
-    /* FEED */
     .section { margin-bottom: 48px; }
     .section-title { color: #ffffff; font-size: 1.3em; margin-bottom: 4px; }
     .section-sub { color: #888; font-size: 0.88em; margin-bottom: 20px; font-style: italic; }
-
     .feed-container {
       background-color: #1a1a1a;
       border: 1px solid #333;
@@ -61,7 +49,6 @@ title: Naouel Eldjouher
     .feed-container::-webkit-scrollbar-track { background: #1a1a1a; margin: 10px 0; border-radius: 10px; }
     .feed-container::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
     .feed-container::-webkit-scrollbar-thumb:hover { background: #4CAF50; }
-
     .feed-item { padding: 25px 0; border-bottom: 1px solid #333; display: block; }
     .feed-item:last-child { border-bottom: none; }
     .feed-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
@@ -70,8 +57,6 @@ title: Naouel Eldjouher
     .feed-body { font-size: 0.93em; line-height: 1.6; color: #cccccc; }
     .read-more { display: inline-block; margin-top: 12px; color: #4CAF50; font-weight: 600; font-size: 0.9em; }
     .read-more:hover { color: #81C784; }
-
-    /* PROJECTS */
     .project-card {
       background-color: #1a1a1a;
       border: 1px solid #333;
@@ -97,18 +82,13 @@ title: Naouel Eldjouher
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-
-    /* TOOLS */
     .tools-list { list-style: none; padding: 0; }
     .tools-list li { padding: 6px 0; border-bottom: 1px solid #222; font-size: 0.93em; color: #cccccc; }
     .tools-list li:last-child { border-bottom: none; }
     .tools-list li strong { color: #e0e0e0; }
-
-    /* CONNECT */
     .connect-list { list-style: none; padding: 0; }
     .connect-list li { padding: 6px 0; font-size: 0.95em; }
     .connect-list li strong { color: #e0e0e0; }
-
     .blog-box {
       background-color: #1a1a1a;
       border: 1px solid #333;
@@ -121,10 +101,14 @@ title: Naouel Eldjouher
 </head>
 <body>
 
-<div class="intro">
-  <h1 style="color:#ffffff; font-size:1.8em; font-weight:600; margin-bottom:8px;">Naouel Eldjouher</h1>
-  <strong style="color:#4CAF50;">Full-Stack Bioinformatician</strong>
-  <p>I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.</p>
+<div class="intro" style="display:flex; align-items:center; gap:28px; margin-bottom:48px;">
+  <img src="/profile.jpg" alt="Naouel Eldjouher"
+    style="width:110px; height:110px; border-radius:50%; object-fit:cover; border:2px solid #333; flex-shrink:0;">
+  <div>
+    <h1 style="color:#ffffff; font-size:1.8em; font-weight:600; margin-bottom:8px;">Naouel Eldjouher</h1>
+    <strong style="color:#4CAF50;">Full-Stack Bioinformatician</strong>
+    <p style="margin-top:8px; color:#cccccc;">I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.</p>
+  </div>
 </div>
 
 <hr>
@@ -164,10 +148,10 @@ title: Naouel Eldjouher
 
 <div class="section">
   <div class="section-title">🚀 Blog Post</div>
-  <div style="margin-top: 16px;">
-  <div class="blog-box">
-    <p>📖 <strong>Read on Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS</a></p>
-  </div>
+  <div style="margin-top:16px;">
+    <div class="blog-box">
+      <p>📖 <strong>Read on Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS</a></p>
+    </div>
   </div>
 </div>
 
@@ -175,39 +159,39 @@ title: Naouel Eldjouher
 
 <div class="section">
   <div class="section-title">💻 Projects</div>
-  <div style="margin-top: 20px;">
+  <div style="margin-top:20px;">
 
-  <div class="project-card">
-    <span class="current-badge">Current Project</span>
-    <h4>🌐 OmniDomain — Multi-Kingdom Cloud Genomics Platform</h4>
-    <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
-    <ul>
-      <li><strong>Unified Infrastructure:</strong> One shared AWS Batch setup, Terraform, and Streamlit UI powering three pipeline engines — NextAMR, FungalFlow, and PhytoFlow.</li>
-      <li><strong>Multi-Kingdom:</strong> Bacterial WGS & AMR detection, fungal genome assembly & BGC discovery, and HiFi-first plant genome assembly from a single codebase.</li>
-      <li><strong>Validated:</strong> Assembled a complete <em>Arabidopsis</em> chloroplast — 155,667 bp, 0 gaps, 100.8% expected size — from 12,745 PacBio HiFi reads.</li>
-      <li><strong>BYOC Model:</strong> All compute runs in your AWS account. The platform provides the pipelines and infrastructure code — you own the compute.</li>
-      <li>🐙 <strong>Code:</strong> <a href="https://github.com/NaouelEldjouher/OmniDomain">Explore the OmniDomain Repository on GitHub</a></li>
-    </ul>
-  </div>
+    <div class="project-card">
+      <span class="current-badge">Current Project</span>
+      <h4>🌐 OmniDomain — Multi-Kingdom Cloud Genomics Platform</h4>
+      <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
+      <ul>
+        <li><strong>Unified Infrastructure:</strong> One shared AWS Batch setup, Terraform, and Streamlit UI powering three pipeline engines — NextAMR, FungalFlow, and PhytoFlow.</li>
+        <li><strong>Multi-Kingdom:</strong> Bacterial WGS & AMR detection, fungal genome assembly & BGC discovery, and HiFi-first plant genome assembly from a single codebase.</li>
+        <li><strong>Validated:</strong> Assembled a complete <em>Arabidopsis</em> chloroplast — 155,667 bp, 0 gaps, 100.8% expected size — from 12,745 PacBio HiFi reads.</li>
+        <li><strong>BYOC Model:</strong> All compute runs in your AWS account. The platform provides the pipelines and infrastructure code — you own the compute.</li>
+        <li>🐙 <strong>Code:</strong> <a href="https://github.com/NaouelEldjouher/OmniDomain">Explore the OmniDomain Repository on GitHub</a></li>
+      </ul>
+    </div>
 
-  <div class="project-card">
-    <h4>🦠 NextAMR (AMR-Flow) — Cloud-Native Bacterial Genome Assembly & AMR Profiling</h4>
-    <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
-    <ul>
-      <li><strong>Automated Cloud Infrastructure:</strong> Provisioned an event-driven AWS architecture using Terraform (IaC) to handle automated job submission via AWS Batch.</li>
-      <li><strong>Cost Efficiency & Portability:</strong> Optimized cloud spend by leveraging EC2 Spot instances and containerized the entire pipeline using Docker for cross-platform reproducibility.</li>
-      <li>🐙 <strong>Code & Architecture:</strong> <a href="https://github.com/NaouelEldjouher/NextAMR">Explore the NextAMR Repository on GitHub</a></li>
-    </ul>
-  </div>
+    <div class="project-card">
+      <h4>🦠 NextAMR (AMR-Flow) — Cloud-Native Bacterial Genome Assembly & AMR Profiling</h4>
+      <div class="stack">Nextflow DSL2 | AWS Batch | Amazon S3 | Docker | Terraform | Streamlit</div>
+      <ul>
+        <li><strong>Automated Cloud Infrastructure:</strong> Provisioned an event-driven AWS architecture using Terraform (IaC) to handle automated job submission via AWS Batch.</li>
+        <li><strong>Cost Efficiency & Portability:</strong> Optimized cloud spend by leveraging EC2 Spot instances and containerized the entire pipeline using Docker for cross-platform reproducibility.</li>
+        <li>🐙 <strong>Code & Architecture:</strong> <a href="https://github.com/NaouelEldjouher/NextAMR">Explore the NextAMR Repository on GitHub</a></li>
+      </ul>
+    </div>
 
-  <div class="project-card">
-    <h4>🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline</h4>
-    <div class="stack">M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation</div>
-    <ul>
-      <li><strong>Reproducible Workflows:</strong> Built an end-to-end bacterial genomics workflow to automate quality control, short/long-read hybrid assembly, and downstream annotation.</li>
-      <li><strong>Academic Foundations:</strong> Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen. (Record: <a href="https://zenodo.org/records/14995561">Zenodo 10.5281/zenodo.14995561</a>)</li>
-    </ul>
-  </div>
+    <div class="project-card">
+      <h4>🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline</h4>
+      <div class="stack">M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation</div>
+      <ul>
+        <li><strong>Reproducible Workflows:</strong> Built an end-to-end bacterial genomics workflow to automate quality control, short/long-read hybrid assembly, and downstream annotation.</li>
+        <li><strong>Academic Foundations:</strong> Developed as the core software deliverable for my M.Sc. thesis at Justus Liebig University Giessen. (Record: <a href="https://zenodo.org/records/14995561">Zenodo 10.5281/zenodo.14995561</a>)</li>
+      </ul>
+    </div>
 
   </div>
 </div>
@@ -216,14 +200,14 @@ title: Naouel Eldjouher
 
 <div class="section">
   <div class="section-title">🛠️ Tools & Technologies I Work With</div>
-  <div style="margin-top: 16px;">
-  <ul class="tools-list">
-    <li><strong>Bacterial Genomics:</strong> De novo & hybrid assembly · Genome annotation · AMR gene detection & profiling · Metagenomics</li>
-    <li><strong>Fungal Genomics:</strong> Genome assembly & structural annotation · BGC detection · CAZyme profiling · Secretome prediction</li>
-    <li><strong>Plant Genomics:</strong> HiFi organelle & nuclear assembly · Repeat masking · Gene prediction · NLR resistance gene identification · Comparative genomics</li>
-    <li><strong>Workflow & Cloud:</strong> Nextflow DSL2 · AWS Batch · S3 · EC2 Spot · Terraform · Docker · Slurm HPC · Bash</li>
-    <li><strong>Data & Dev:</strong> Python · R (Tidyverse) · SQL · Pandas · Streamlit · Git</li>
-  </ul>
+  <div style="margin-top:16px;">
+    <ul class="tools-list">
+      <li><strong>Bacterial Genomics:</strong> De novo & hybrid assembly · Genome annotation · AMR gene detection & profiling · Metagenomics</li>
+      <li><strong>Fungal Genomics:</strong> Genome assembly & structural annotation · BGC detection · CAZyme profiling · Secretome prediction</li>
+      <li><strong>Plant Genomics:</strong> HiFi organelle & nuclear assembly · Repeat masking · Gene prediction · NLR resistance gene identification · Comparative genomics</li>
+      <li><strong>Workflow & Cloud:</strong> Nextflow DSL2 · AWS Batch · S3 · EC2 Spot · Terraform · Docker · Slurm HPC · Bash</li>
+      <li><strong>Data & Dev:</strong> Python · R (Tidyverse) · SQL · Pandas · Streamlit · Git</li>
+    </ul>
   </div>
 </div>
 
@@ -231,13 +215,13 @@ title: Naouel Eldjouher
 
 <div class="section">
   <div class="section-title">📫 Connect With Me</div>
-  <div style="margin-top: 16px;">
-  <ul class="connect-list">
-    <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher">linkedin.com/in/naoueleldjouher</a></li>
-    <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher">github.com/NaouelEldjouher</a></li>
-    <li>📧 <strong>Email:</strong> <a href="mailto:hellonaouel[at]gmail.com">hellonaouel[at]gmail.com</a></li>
-    <li>📖 <strong>Medium:</strong> <a href="https://medium.com/@NaouelEldjouher">From Terminal Scripts to the Cloud</a></li>
-  </ul>
+  <div style="margin-top:16px;">
+    <ul class="connect-list">
+      <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher">linkedin.com/in/naoueleldjouher</a></li>
+      <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher">github.com/NaouelEldjouher</a></li>
+      <li>📧 <strong>Email:</strong> <a href="mailto:hellonaouel@gmail.com">hellonaouel@gmail.com</a></li>
+      <li>📖 <strong>Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud</a></li>
+    </ul>
   </div>
 </div>
 
