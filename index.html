@@ -26,13 +26,15 @@ title: Naouel Eldjouher
     a:hover { text-decoration: underline; }
     hr { border: none; border-top: 1px solid #333; margin: 48px 0; }
     code { background-color: #2e3440; color: #eceff4; padding: 2px 6px; border-radius: 4px; }
-    h2 { color: #ffffff; font-size: 1.3em; margin-bottom: 6px; }
-    h3 { color: #ffffff; font-size: 1.15em; margin: 0 0 16px 0; }
     h4 { color: #ffffff; font-size: 1.05em; margin: 0 0 4px 0; }
-    .intro { margin-bottom: 48px; }
     .section { margin-bottom: 48px; }
     .section-title { color: #ffffff; font-size: 1.3em; margin-bottom: 4px; }
     .section-sub { color: #888; font-size: 0.88em; margin-bottom: 20px; font-style: italic; }
+    .contact-line { font-size: 0.88em; color: #888; margin-top: 10px; }
+    .contact-line a { color: #888; }
+    .contact-line a:hover { color: #e0e0e0; text-decoration: none; }
+    .contact-sep { margin: 0 6px; color: #444; }
+    .email-protect span { display: none; }
     .feed-container {
       background-color: #1a1a1a;
       border: 1px solid #333;
@@ -86,9 +88,6 @@ title: Naouel Eldjouher
     .tools-list li { padding: 6px 0; border-bottom: 1px solid #222; font-size: 0.93em; color: #cccccc; }
     .tools-list li:last-child { border-bottom: none; }
     .tools-list li strong { color: #e0e0e0; }
-    .connect-list { list-style: none; padding: 0; }
-    .connect-list li { padding: 6px 0; font-size: 0.95em; }
-    .connect-list li strong { color: #e0e0e0; }
     .blog-box {
       background-color: #1a1a1a;
       border: 1px solid #333;
@@ -98,6 +97,20 @@ title: Naouel Eldjouher
     }
     .blog-box p { margin: 0; font-size: 0.93em; color: #cccccc; }
   </style>
+  <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const emailLink = document.getElementById('email-link');
+    if (emailLink) {
+      const reveal = () => {
+        emailLink.href = 'mailto:contact@naouel.dev';
+        emailLink.removeEventListener('click', reveal);
+        emailLink.removeEventListener('mouseenter', reveal);
+      };
+      emailLink.addEventListener('click', reveal);
+      emailLink.addEventListener('mouseenter', reveal);
+    }
+  });
+  </script>
 </head>
 <body>
 
@@ -108,6 +121,15 @@ title: Naouel Eldjouher
     <h1 style="color:#ffffff; font-size:1.8em; font-weight:600; margin-bottom:8px;">Naouel Eldjouher</h1>
     <strong style="color:#4CAF50;">Full-Stack Bioinformatician</strong>
     <p style="margin-top:8px; color:#cccccc;">I specialize in plant and bacterial genomics, bridging high-throughput wet-lab insights with containerized, cloud-native infrastructure and Nextflow.</p>
+    <div class="contact-line">
+      <a href="https://linkedin.com/in/naoueleldjouher" target="_blank">LinkedIn</a>
+      <span class="contact-sep">·</span>
+      <a href="https://github.com/NaouelEldjouher" target="_blank">GitHub</a>
+      <span class="contact-sep">·</span>
+      <a href="https://medium.com/@NaouelEldjouher" target="_blank">Medium</a>
+      <span class="contact-sep">·</span>
+      <a href="#protected" id="email-link" class="email-protect">contact<span>-remove-bot-</span>@naouel.dev</a>
+    </div>
   </div>
 </div>
 
@@ -210,67 +232,6 @@ title: Naouel Eldjouher
     </ul>
   </div>
 </div>
-
-<hr>
-
-<div class="section">
-  <div class="section-title">🛠️ Tools & Technologies I Work With</div>
-  <div style="margin-top:16px;">
-    <ul class="tools-list">
-      <li><strong>Bacterial Genomics:</strong> De novo & hybrid assembly · Genome annotation · AMR gene detection & profiling · Metagenomics</li>
-      <li><strong>Fungal Genomics:</strong> Genome assembly & structural annotation · BGC detection · CAZyme profiling · Secretome prediction</li>
-      <li><strong>Plant Genomics:</strong> HiFi organelle & nuclear assembly · Repeat masking · Gene prediction · NLR resistance gene identification · Comparative genomics</li>
-      <li><strong>Workflow & Cloud:</strong> Nextflow DSL2 · AWS Batch · S3 · EC2 Spot · Terraform · Docker · Slurm HPC · Bash</li>
-      <li><strong>Data & Dev:</strong> Python · R (Tidyverse) · SQL · Pandas · Streamlit · Git</li>
-    </ul>
-  </div>
-</div>
-
-<hr>
-
-<div class="section">
-  <div class="section-title">📫 Connect With Me</div>
-  <div style="margin-top:16px;">
-    <ul class="connect-list">
-      <li>💼 <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/naoueleldjouher" target="_blank">linkedin.com/in/naoueleldjouher</a></li>
-      <li>🐙 <strong>GitHub:</strong> <a href="https://github.com/NaouelEldjouher" target="_blank">github.com/NaouelEldjouher</a></li>
-      <li>📖 <strong>Medium:</strong> <a href="https://medium.com/@NaouelEldjouher" target="_blank">medium.com/@NaouelEldjouher</a></li>
-      
-      <li>📧 <strong>Email:</strong> 
-        <a href="#protected" id="secure-link" class="email-protect">
-          contact<span>-remove-this-bot-</span>@naouel.dev
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<style>
-  .email-protect span {
-    display: none;
-  }
-</style>
-
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const emailLink = document.getElementById('secure-link');
-    
-    if (emailLink) {
-      const revealEmail = (e) => {
-        const user = "contact";
-        const domain = "naouel.dev";
-        
-        emailLink.href = `mailto:${user}@${domain}`;
-        
-        emailLink.removeEventListener('click', revealEmail);
-        emailLink.removeEventListener('mouseenter', revealEmail);
-      };
-
-      emailLink.addEventListener('click', revealEmail);
-      emailLink.addEventListener('mouseenter', revealEmail); 
-    }
-  });
-</script>
 
 </body>
 </html>
