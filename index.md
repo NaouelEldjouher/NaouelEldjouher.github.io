@@ -14,14 +14,14 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
-  --bg:       #0e0e0e;
-  --surface:  #161616;
-  --border:   #242424;
-  --accent:   #4ade80;
-  --text:     #e2e2e2;
-  --dim:      #888;
-  --mono:     'JetBrains Mono', monospace;
-  --sans:     'Inter', sans-serif;
+  --bg:      #0e0e0e;
+  --surface: #161616;
+  --border:  #242424;
+  --accent:  #4ade80;
+  --text:    #e2e2e2;
+  --dim:     #888;
+  --mono:    'JetBrains Mono', monospace;
+  --sans:    'Inter', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -50,81 +50,43 @@ nav {
   height: 52px;
   display: flex; justify-content: space-between; align-items: center;
 }
-.nav-name {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  color: var(--accent);
-}
+.nav-name { font-family: var(--mono); font-size: 0.8rem; color: var(--accent); }
 .nav-links { display: flex; gap: 24px; list-style: none; }
-.nav-links a {
-  font-size: 0.8rem;
-  color: var(--dim);
-  transition: color 0.15s;
-}
+.nav-links a { font-size: 0.8rem; color: var(--dim); transition: color 0.15s; }
 .nav-links a:hover { color: var(--text); }
 
 /* LAYOUT */
 .page { max-width: 760px; margin: 0 auto; padding: 0 24px; }
 
 /* HERO */
-.hero {
-  padding: 140px 0 100px;
-  border-bottom: 1px solid var(--border);
-}
+.hero { padding: 140px 0 100px; border-bottom: 1px solid var(--border); }
 .hero-badge {
   display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  margin-bottom: 24px;
+  font-family: var(--mono); font-size: 0.7rem;
+  color: var(--accent); letter-spacing: 0.1em; margin-bottom: 24px;
 }
 h1 {
   font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 300;
-  line-height: 1.15;
-  color: #fff;
-  margin-bottom: 20px;
-  letter-spacing: -0.02em;
+  font-weight: 300; line-height: 1.15;
+  color: #fff; margin-bottom: 20px; letter-spacing: -0.02em;
 }
-.hero-desc {
-  font-size: 1rem;
-  color: var(--dim);
-  max-width: 500px;
-  margin-bottom: 36px;
-  line-height: 1.8;
-}
+.hero-desc { font-size: 1rem; color: var(--dim); max-width: 500px; margin-bottom: 36px; line-height: 1.8; }
 .hero-links { display: flex; gap: 12px; flex-wrap: wrap; }
 .link-btn {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  padding: 8px 18px;
-  border-radius: 3px;
-  transition: all 0.15s;
+  font-family: var(--mono); font-size: 0.75rem;
+  padding: 8px 18px; border-radius: 3px; transition: all 0.15s;
 }
-.link-btn-solid {
-  background: var(--accent);
-  color: #0e0e0e;
-  font-weight: 500;
-}
+.link-btn-solid { background: var(--accent); color: #0e0e0e; font-weight: 500; }
 .link-btn-solid:hover { opacity: 0.85; }
-.link-btn-outline {
-  border: 1px solid var(--border);
-  color: var(--dim);
-}
+.link-btn-outline { border: 1px solid var(--border); color: var(--dim); }
 .link-btn-outline:hover { border-color: #444; color: var(--text); }
 
 /* SECTIONS */
 section { padding: 80px 0; border-bottom: 1px solid var(--border); }
-section:last-of-type { border-bottom: none; }
-
 .section-label {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--dim);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-bottom: 40px;
+  font-family: var(--mono); font-size: 0.68rem;
+  color: var(--dim); letter-spacing: 0.12em;
+  text-transform: uppercase; margin-bottom: 40px;
 }
 
 /* ABOUT */
@@ -134,85 +96,50 @@ section:last-of-type { border-bottom: none; }
 
 /* PROJECTS */
 .project {
-  padding: 32px 0;
-  border-top: 1px solid var(--border);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 20px;
-  align-items: start;
+  padding: 32px 0; border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 20px; align-items: start;
 }
 .project:first-of-type { border-top: none; padding-top: 0; }
-.project-meta {
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--dim);
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-}
-.project-name {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 6px;
-}
-.project-stack {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--accent);
-  margin-bottom: 14px;
-  letter-spacing: 0.04em;
-}
+.project-meta { font-family: var(--mono); font-size: 0.68rem; color: var(--dim); letter-spacing: 0.08em; margin-bottom: 8px; }
+.project-name { font-size: 1.05rem; font-weight: 500; color: #fff; margin-bottom: 6px; }
+.project-stack { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); margin-bottom: 14px; letter-spacing: 0.04em; }
 .project-points { padding-left: 16px; }
-.project-points li {
-  color: var(--dim);
-  font-size: 0.88rem;
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
+.project-points li { color: var(--dim); font-size: 0.88rem; margin-bottom: 6px; line-height: 1.6; }
 .project-points li strong { color: var(--text); font-weight: 500; }
 .ext-link {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--dim);
-  border: 1px solid var(--border);
-  padding: 6px 14px;
-  border-radius: 3px;
-  white-space: nowrap;
-  transition: all 0.15s;
+  font-family: var(--mono); font-size: 0.72rem;
+  color: var(--dim); border: 1px solid var(--border);
+  padding: 6px 14px; border-radius: 3px; white-space: nowrap; transition: all 0.15s;
 }
 .ext-link:hover { color: var(--accent); border-color: var(--accent); }
 
 /* SKILLS */
-.skills-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-}
-.skill-col-title {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--dim);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
+.skills-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.skill-col-title { font-family: var(--mono); font-size: 0.7rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 16px; }
 .skill-list { list-style: none; }
-.skill-list li {
-  font-size: 0.85rem;
-  color: var(--dim);
-  padding: 4px 0;
-  border-bottom: 1px solid var(--border);
-}
+.skill-list li { font-size: 0.85rem; color: var(--dim); padding: 4px 0; border-bottom: 1px solid var(--border); }
 .skill-list li:last-child { border-bottom: none; }
+
+/* BUILD LOGS */
+.log-item {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  gap: 20px; padding: 24px 0; border-top: 1px solid var(--border);
+}
+.log-item:first-of-type { border-top: none; padding-top: 0; }
+.log-tag {
+  font-family: var(--mono); font-size: 0.65rem;
+  color: var(--accent); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-bottom: 6px;
+}
+.log-title { font-size: 0.95rem; color: var(--text); margin-bottom: 6px; font-weight: 500; }
+.log-excerpt { font-size: 0.83rem; color: var(--dim); line-height: 1.6; max-width: 520px; }
+.log-date { font-family: var(--mono); font-size: 0.65rem; color: var(--dim); white-space: nowrap; margin-top: 2px; }
 
 /* WRITING */
 .writing-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 20px 0;
-  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 20px; padding: 20px 0; border-top: 1px solid var(--border);
 }
 .writing-item:first-of-type { border-top: none; padding-top: 0; }
 .writing-title { font-size: 0.95rem; color: var(--text); margin-bottom: 4px; }
@@ -220,36 +147,16 @@ section:last-of-type { border-bottom: none; }
 
 /* CONTACT */
 .contact-row { display: flex; gap: 12px; flex-wrap: wrap; }
-.contact-item {
-  border: 1px solid var(--border);
-  border-radius: 3px;
-  padding: 14px 20px;
-  transition: border-color 0.15s;
-}
+.contact-item { border: 1px solid var(--border); border-radius: 3px; padding: 14px 20px; transition: border-color 0.15s; }
 .contact-item:hover { border-color: #444; }
-.contact-item-label {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--dim);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
+.contact-item-label { font-family: var(--mono); font-size: 0.65rem; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
 .contact-item-val { font-size: 0.85rem; color: var(--text); }
 
-/* FOOTER */
-footer {
-  padding: 40px 0;
-  text-align: center;
-  font-family: var(--mono);
-  font-size: 0.68rem;
-  color: var(--dim);
-  letter-spacing: 0.06em;
-}
+footer { padding: 40px 0; text-align: center; font-family: var(--mono); font-size: 0.68rem; color: var(--dim); letter-spacing: 0.06em; }
 
 @media (max-width: 600px) {
   .skills-row { grid-template-columns: 1fr; gap: 24px; }
-  .project { grid-template-columns: 1fr; }
+  .project, .log-item, .writing-item { grid-template-columns: 1fr; flex-direction: column; }
   .nav-links { display: none; }
   h1 { font-size: 2rem; }
 }
@@ -263,6 +170,7 @@ footer {
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#logs">Logs</a></li>
       <li><a href="#writing">Writing</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -315,6 +223,19 @@ footer {
   </div>
   <a href="https://zenodo.org/records/14995561" class="ext-link" target="_blank">Zenodo ↗</a>
 </div>
+
+<div class="project">
+  <div>
+    <div class="project-meta">03 — In Progress</div>
+    <div class="project-name">OmniDomain</div>
+    <div class="project-stack">Nextflow DSL2 · AWS Batch · Docker · Terraform</div>
+    <ul class="project-points">
+      <li>Unified platform for <strong>bacterial, fungal, and plant genomics</strong> — one shared AWS infrastructure, three pipeline engines (NextAMR, FungalFlow, PhytoFlow).</li>
+      <li>Shared module architecture: fix once, all pipelines inherit. Already assembled a <strong>complete Arabidopsis chloroplast</strong> (155,667 bp, 0 gaps) from PacBio HiFi reads.</li>
+    </ul>
+  </div>
+  <a href="https://github.com/NaouelEldjouher" class="ext-link" target="_blank">GitHub ↗</a>
+</div>
   </section>
   <section id="skills">
     <p class="section-label">Skills</p>
@@ -353,6 +274,35 @@ footer {
       </div>
     </div>
   </section>
+  <section id="logs">
+    <p class="section-label">OmniDomain Build Logs</p>
+<div class="log-item">
+  <div>
+    <div class="log-tag">May 23, 2026</div>
+    <div class="log-title">Post 3: First HiFi Assembly — A Complete Chloroplast</div>
+    <div class="log-excerpt">Stub tests caught architecture bugs early — Nextflow 26 breaking changes, a params block in the wrong config, a Groovy reserved keyword. With the pipeline clean, PhytoFlow assembled a complete Arabidopsis chloroplast from 12,745 PacBio HiFi reads: 155,667 bp, 0 gaps, 100.8% expected size.</div>
+  </div>
+  <a href="/post-3-first-hifi-assembly-a-complete-chloroplast" class="ext-link">Read ↗</a>
+</div>
+
+<div class="log-item">
+  <div>
+    <div class="log-tag">May 22, 2026</div>
+    <div class="log-title">Post 2: Designing the Nextflow Repository Structure</div>
+    <div class="log-excerpt">Three pipelines, one repo. Each pipeline gets its own main.nf and modules.config. Shared modules follow one rule: used by two or more pipelines → modules/local/shared/. Write once, all pipelines inherit.</div>
+  </div>
+  <a href="/designing-the-nextflow-repository-structure" class="ext-link">Read ↗</a>
+</div>
+
+<div class="log-item">
+  <div>
+    <div class="log-tag">May 20, 2026</div>
+    <div class="log-title">Post 1: The OmniDomain Blueprint</div>
+    <div class="log-excerpt">After finishing NextAMR, expanding to fungi and plants. OmniDomain is a unified Nextflow + AWS Batch platform for bacterial, fungal, and plant genomics — one shared infrastructure, three pipeline engines.</div>
+  </div>
+  <a href="/the-omniDomain-blueprint" class="ext-link">Read ↗</a>
+</div>
+  </section>
   <section id="writing">
     <p class="section-label">Writing</p>
     <div class="writing-item">
@@ -360,14 +310,7 @@ footer {
         <div class="writing-title">From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform</div>
         <div class="writing-sub">Medium · Deep-dive architectural breakdown of NextAMR</div>
       </div>
-      <a href="https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-55bfb16090e7" class="ext-link" target="_blank">Read ↗</a>
-    </div>
-    <div class="writing-item">
-      <div>
-        <div class="writing-title">OmniDomain Build Logs</div>
-        <div class="writing-sub">Daily architectural notes and challenges, building in public</div>
-      </div>
-      <a href="/posts" class="ext-link">Logs ↗</a>
+      <a href="/nextamr" class="ext-link">Read ↗</a>
     </div>
   </section>
   <section id="contact">
