@@ -1,6 +1,6 @@
 title: Naouel's Portfolio
 theme: minima
-permalink: /:title/
+permalink: /:name/
 markdown: kramdown
 plugins:
   - jekyll-feed
