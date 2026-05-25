@@ -1,8 +1,3 @@
----
-layout: none
-title: Naouel Eldjouher — Full-Stack Bioinformatician
-description: Full-Stack Bioinformatician specialising in plant and bacterial genomics, cloud-native pipelines with Nextflow and AWS.
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +82,7 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
   </style>
 </head>
 <body>
-
+ 
 <nav>
   <div class="nav-inner">
     <span class="nav-name">naouel.dev</span>
@@ -100,9 +95,9 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
     </ul>
   </div>
 </nav>
-
+ 
 <div class="page">
-
+ 
   <div class="hero">
     <div class="hero-badge">Open to opportunities</div>
     <h1>Naouel Eldjouher</h1>
@@ -113,16 +108,16 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
       <a href="https://linkedin.com/in/naoueleldjouher" class="link-btn link-btn-outline" target="_blank">LinkedIn ↗</a>
     </div>
   </div>
-
+ 
   <section id="logs">
     <p class="section-label">OmniDomain Build Logs</p>
     <div class="log-item">
       <div>
         <div class="log-tag">May 23, 2026</div>
         <div class="log-title">Post 3: First HiFi Assembly — A Complete Chloroplast</div>
-        <div class="log-excerpt">Stub tests caught architecture bugs early — Nextflow 26 breaking changes, wrong config placement, a Groovy reserved keyword. PhytoFlow then assembled a complete Arabidopsis chloroplast from 12,745 PacBio HiFi reads: 155,667 bp, 0 gaps, 100.8% expected size.</div>
+        <div class="log-excerpt">Stub tests caught architecture bugs early — Nextflow 26 breaking changes, wrong config placement, a Groovy reserved keyword. PhytoFlow assembled a complete Arabidopsis chloroplast from 12,745 PacBio HiFi reads: 155,667 bp, 0 gaps, 100.8% expected size.</div>
       </div>
-      <a href="/post-3-first-hifi-assembly-a-complete-chloroplast" class="ext-link">Read ↗</a>
+      <a href="/2026-05-23-omnidomain-day-3/" class="ext-link">Read ↗</a>
     </div>
     <div class="log-item">
       <div>
@@ -130,7 +125,7 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
         <div class="log-title">Post 2: Designing the Nextflow Repository Structure</div>
         <div class="log-excerpt">Three pipelines, one repo. Shared modules follow one rule: used by two or more pipelines go to modules/local/shared/. Write once, all pipelines inherit.</div>
       </div>
-      <a href="/designing-the-nextflow-repository-structure" class="ext-link">Read ↗</a>
+      <a href="/2026-05-22-omnidomain-Post2/" class="ext-link">Read ↗</a>
     </div>
     <div class="log-item">
       <div>
@@ -138,10 +133,10 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
         <div class="log-title">Post 1: The OmniDomain Blueprint</div>
         <div class="log-excerpt">After finishing NextAMR, expanding to fungi and plants. OmniDomain is a unified Nextflow + AWS Batch platform for bacterial, fungal, and plant genomics — one shared infrastructure, three pipeline engines.</div>
       </div>
-      <a href="/the-omniDomain-blueprint" class="ext-link">Read ↗</a>
+      <a href="/2026-05-20-omnidomain-day-1/" class="ext-link">Read ↗</a>
     </div>
   </section>
-
+ 
   <section id="projects">
     <p class="section-label">Projects</p>
     <div class="project">
@@ -182,7 +177,7 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
       <a href="https://zenodo.org/records/14995561" class="ext-link" target="_blank">Zenodo ↗</a>
     </div>
   </section>
-
+ 
   <section id="skills">
     <p class="section-label">Skills</p>
     <div class="skills-row">
@@ -220,7 +215,7 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
       </div>
     </div>
   </section>
-
+ 
   <section id="writing">
     <p class="section-label">Writing</p>
     <div class="writing-item">
@@ -231,7 +226,7 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
       <a href="/nextamr" class="ext-link">Read ↗</a>
     </div>
   </section>
-
+ 
   <section id="contact">
     <p class="section-label">Contact</p>
     <div class="contact-row">
@@ -253,10 +248,10 @@ description: Full-Stack Bioinformatician specialising in plant and bacterial gen
       </a>
     </div>
   </section>
-
+ 
 </div>
-
+ 
 <footer>© 2026 Naouel Eldjouher · Full-Stack Bioinformatician · Giessen, DE</footer>
-
+ 
 </body>
 </html>
