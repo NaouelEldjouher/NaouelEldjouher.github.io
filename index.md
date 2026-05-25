@@ -1,3 +1,6 @@
+HTML
+<link rel="icon" type="image/png" href="favicon.png">
+
 <style>
   body {
     background-color: #121212 !important;
@@ -7,8 +10,8 @@
   a { color: #81a1c1 !important; text-decoration: none; }
   a:hover { text-decoration: underline; }
   hr { border-color: #333 !important; }
-  code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px; }
-  <link rel="icon" type="image/png" href="favicon.png">
+  code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px;
+
   /* --- The Big Master Rectangle (Strictly Vertical) --- */
   .feed-container {
     background-color: #1a1a1a;
@@ -115,4 +118,4 @@ I recently published a deep-dive architectural breakdown of my end-to-end cloud 
 * 💼 **LinkedIn:** [linkedin.com/in/naoueleldjouher](https://linkedin.com/in/naoueleldjouher)
 * 🐙 **GitHub Profile:** [github.com/NaouelEldjouher](https://github.com/NaouelEldjouher)
 * 📧 **Email:** [hellonaouel[at]gmail.com]
-* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://medium.com/@NaouelEldjouher/from-terminal-scripts-to-the-cloud-designing-an-automated-amr-detection-platform-with-nextflow-and-
+* 📖 **Read on Medium:** [From Terminal Scripts to the Cloud: Designing an Automated AMR Detection Platform with Nextflow and AWS](https://naouel.dev/nextamr)
