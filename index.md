@@ -8,7 +8,7 @@
   a:hover { text-decoration: underline; }
   hr { border-color: #333 !important; }
   code { background-color: #2e3440 !important; color: #eceff4 !important; padding: 2px 6px; border-radius: 4px; }
-  
+  <link rel="icon" type="image/png" href="favicon.png">
   /* --- The Big Master Rectangle (Strictly Vertical) --- */
   .feed-container {
     background-color: #1a1a1a;
