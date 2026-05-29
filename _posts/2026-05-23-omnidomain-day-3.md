@@ -23,4 +23,9 @@ gene is nuclear-encoded.
 The user selects the genome type --genome_type organelle and the pipeline 
 automatically skips Helixer, MAKER, and NLR-Annotator. 
 
+Baseline validated. Three things on the roadmap next:
+1️⃣ The 100.8% artifact — resolving the overlapping assembler ends to cleanly circularize to 100.0%
+2️⃣ Coverage saturation — at whole-genome scale, organelle coverage spikes to 5,000x+. Building a dynamic downsampler to prevent assembler crashes
+3️⃣ Structural isomers — the .gfa assembly graph captures the two orientations of the chloroplast that a flat .fasta hides. Planning to expose this output Baseline nailed. Now making it scale.
+
 Next: nuclear genome.
