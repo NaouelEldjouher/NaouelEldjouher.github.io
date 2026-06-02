@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Post 4: PhytoFlow Case 3 — Nuclear + Reference: What Changes When You Add a Reference Genome"
-date: 2026-05-28
+date: 2026-06-02
 tags:
   - nextflow
   - aws
