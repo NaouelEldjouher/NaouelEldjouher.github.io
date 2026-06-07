@@ -120,6 +120,20 @@ title: Naouel Eldjouher
       box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
     }
     .blog-box p { margin: 0; font-size: 0.93em; color: #cccccc; }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Creates a perfect 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+     }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
   <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -138,7 +152,7 @@ title: Naouel Eldjouher
 </head>
 <body>
 
-<!-- INTRO: photo + text in a row, contact sits BELOW both -->
+
 <div class="intro" style="margin-bottom:48px;">
   <div style="display:flex; align-items:flex-start; gap:28px;">
     <img src="/profile.png" alt="Naouel Eldjouher"
@@ -276,17 +290,16 @@ title: Naouel Eldjouher
         <li>🐙 <strong>Code & Architecture:</strong> <a href="https://github.com/NaouelEldjouher/NextAMR">Explore the NextAMR Repository on GitHub</a></li>
         <li>📖 <strong>Read on Medium:</strong> <a href="https://naouel.dev/nextamr">From Terminal Scripts to the Cloud</a></li>
       </ul>
-      <iframe 
-       src="https://www.youtube.com/embed/QFy639KoqRU" 
-       title="YouTube video player" 
-       frameborder="0" 
-       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-       allowfullscreen>
-  </iframe>
-</div>
-
+      <div class="video-container">
+        <iframe 
+         src="https://www.youtube.com/embed/QFy639KoqRU" 
+         title="Video presentation" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+         allowfullscreen>
+        </iframe>
+      </div>
     </div>
-
     <div class="project-card">
       <h4>🎓 Baktflow — Automated Bacterial Genome Analysis Pipeline</h4>
       <div class="stack">M.Sc. Thesis Project | Nextflow | Genome Assembly & Functional Annotation</div>
