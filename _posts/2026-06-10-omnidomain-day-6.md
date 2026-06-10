@@ -4,10 +4,10 @@ date: 2026-06-10
 tags: [omnidomain, fastapi, architecture, postgresql]
 ---
  
-The original OmniDomain had Streamlit talking directly to PostgreSQL and AWS Batch. That was a deliberate choice. I wanted to focus on the pipeline infrastructure, not the UI framework. It worked.
+The original project had Streamlit talking directly to PostgreSQL and AWS Batch. That was a deliberate choice. I wanted to focus on the pipeline infrastructure.
  
-But as OmniDomain grew from one pipeline to three, and from a personal project to something I'd want a team to maintain, the architecture needed a second pass. The problem isn't Streamlit — it's that business logic, database queries, and AWS calls were all mixed inside UI files. Untestable, fragile, and locked to one consumer.
- 
+But as it is growing from one pipeline to three, I started asking what production-grade internal tooling actually requires and refactoring toward those answers. The problem isn't Streamlit, it's that business logic, database queries, and AWS calls were all mixed inside UI files. Untestable, fragile, and locked to one consumer.
+
 This week I added FastAPI as an application layer between the UI and the infrastructure.
  
 ```mermaid
