@@ -10,7 +10,7 @@ But as it is growing from one pipeline to three, I started asking what productio
 
 This week I added FastAPI as an application layer between the UI and the infrastructure.
  
-<pre class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
+<div class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
 graph TB
     subgraph UI ["🖥️ Streamlit — presentation only"]
         form["form_mode.py"]
@@ -31,7 +31,7 @@ graph TB
 
     UI -->|"httpx calls"| API
     API --> AWS
-</pre>
+</div>
  
 The Streamlit files changed minimally — `from core.db import create_run` became `httpx.post("/runs", ...)`. The visual interface is identical.
  
@@ -40,4 +40,8 @@ What changed is where logic lives. Routes handle HTTP concerns. Services handle 
 The immediate benefit: services are plain Python now. Testable without running Streamlit or touching AWS.
  
 The Terraform infrastructure is completely untouched.
- 
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
