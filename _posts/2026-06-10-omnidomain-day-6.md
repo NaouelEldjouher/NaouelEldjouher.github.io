@@ -10,7 +10,7 @@ But as it is growing from one pipeline to three, I started asking what productio
 
 This week I added FastAPI as an application layer between the UI and the infrastructure.
  
-```mermaid
+<div class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
 graph TB
     subgraph UI ["🖥️ Streamlit — presentation only"]
         form["form_mode.py"]
@@ -18,20 +18,20 @@ graph TB
         monitor["monitor.py"]
         results["results.py"]
     end
- 
+
     subgraph API ["⚡ FastAPI — all business logic"]
         routes["routes/\nauth · runs · files"]
         services["services/\nrun · monitor · s3 · auth"]
         db["db/\nsession · models · repository"]
     end
- 
+
     subgraph AWS ["☁️ AWS — unchanged"]
         batch_aws["Batch · S3 · RDS · Secrets Manager"]
     end
- 
+
     UI -->|"httpx calls"| API
     API --> AWS
-```
+</div>
  
 The Streamlit files changed minimally — `from core.db import create_run` became `httpx.post("/runs", ...)`. The visual interface is identical.
  
