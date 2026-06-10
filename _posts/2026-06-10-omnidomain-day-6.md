@@ -10,7 +10,7 @@ But as it is growing from one pipeline to three, I started asking what productio
 
 This week I added FastAPI as an application layer between the UI and the infrastructure.
  
-<div class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
+<pre class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
 graph TB
     subgraph UI ["🖥️ Streamlit — presentation only"]
         form["form_mode.py"]
