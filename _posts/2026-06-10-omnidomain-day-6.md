@@ -31,7 +31,7 @@ graph TB
 
     UI -->|"httpx calls"| API
     API --> AWS
-</div>
+</pre>
  
 The Streamlit files changed minimally — `from core.db import create_run` became `httpx.post("/runs", ...)`. The visual interface is identical.
  
