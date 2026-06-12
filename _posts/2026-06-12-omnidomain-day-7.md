@@ -6,7 +6,7 @@ tags: [omnidomain, fastapi, sqlalchemy, postgresql, alembic]
 
 This week I built the database layer for OmniDomain's FastAPI backend. Three files, each with one job.
 
-The original OmniDomain had Streamlit calling PostgreSQL directly — queries scattered across UI files, no transaction control, no audit trail. As I started asking what production-grade internal tooling actually requires, this was the first thing to fix.
+The original OmniDomain had Streamlit calling PostgreSQL directly, queries scattered across UI files, no transaction control, no audit trail. As I started asking what production-grade internal tooling actually requires, this was the first thing to fix.
 
 ```mermaid
 graph LR
@@ -91,5 +91,4 @@ Every future schema change gets a new migration file. No manual SQL, no schema d
 
 *Next: FastAPI routes and the service layer — where the repository gets called.*
 
-*Full architecture writeup → [Medium post]*
-*Code → [github.com/NaouelEldjouher/OmniDomain]*
+
