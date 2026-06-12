@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "PhytoFlow Case 3 — Nuclear + Reference: What Changes When You Add a Reference Genome"
+title: "PhytoFlow Case 3 Nuclear + Reference: What Changes When You Add a Reference Genome"
 date: 2026-06-02
 tags: [nextflow, aws, architecture, omnidomain, plantgenomics, hifi]
 ---
@@ -57,9 +57,9 @@ No other flags. The pipeline routes itself.
 
 RagTag attempted to order 38 assembled contigs against the TAIR10 *Arabidopsis* reference (135Mb, 5 chromosomes).
 
-With only 2.1Mb of assembly — roughly 1.5% of the full genome — most contigs could not be confidently placed. RagTag requires sufficient overlap between the query assembly and the reference to anchor contigs. 
+With only 2.1Mb of assembly, roughly 1.5% of the full genome, most contigs could not be confidently placed. RagTag requires sufficient overlap between the query assembly and the reference to anchor contigs. 
 
-This is not a pipeline failure. RagTag ran without errors and produced correct output. The limited scaffolding is a direct consequence of using a validation dataset — 5,000 reads representing 1.5% of the genome. On a complete assembly, RagTag would anchor thousands of contigs into five chromosome-scale scaffolds.
+This is not a pipeline failure. RagTag ran without errors and produced correct output. The limited scaffolding is a direct consequence of using a validation dataset, 5,000 reads representing 1.5% of the genome. On a complete assembly, RagTag would anchor thousands of contigs into five chromosome-scale scaffolds.
 
 ---
 
