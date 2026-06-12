@@ -8,7 +8,7 @@ This week I built the database layer for OmniDomain's FastAPI backend. Three fil
 
 The original OmniDomain had Streamlit calling PostgreSQL directly, queries scattered across UI files, no transaction control, no audit trail. As I started asking what production-grade internal tooling actually requires, this was the first thing to fix.
 
-```mermaid
+<div class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
 graph LR
     subgraph Before
         UI_old["Streamlit"] -->|"direct SQL"| DB_old["PostgreSQL"]
@@ -23,7 +23,7 @@ graph LR
         models --> DB_new
         repo --> DB_new
     end
-```
+</div>
 
 ---
 
@@ -55,7 +55,7 @@ Three repository classes — `UserRepository`, `RunRepository`, `UploadRepositor
 
 The transaction boundary is explicit: the repository flushes, never commits. The service layer owns the transaction. One business operation — create a run, submit to Batch, record the job ID — either succeeds completely or rolls back completely. The repository prepares the work, the service decides when it's done.
 
-```mermaid
+<div class="mermaid" style="display: flex; justify-content: center; margin: 40px 0;">
 sequenceDiagram
     participant S as run_service.py
     participant R as repository.py
@@ -75,7 +75,7 @@ sequenceDiagram
 
     S->>DB: db.commit()
     Note over DB: everything permanent atomically
-```
+</div>
 
 If Batch submission fails, `db.commit()` never runs. The transaction rolls back. No run record with a missing job ID.
 
@@ -90,5 +90,4 @@ Every future schema change gets a new migration file. No manual SQL, no schema d
 ---
 
 *Next: FastAPI routes and the service layer — where the repository gets called.*
-
 
