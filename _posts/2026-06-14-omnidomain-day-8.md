@@ -8,7 +8,7 @@ Data layer done. Next: the FastAPI application, authentication, and the first re
 
 The goal was to wire the full request path end to end. A scientist sends a POST request, gets back a run ID. That means: validate the request, authenticate the user, call the service, call the repository, submit to AWS Batch, return a response. Every layer doing exactly one thing.
 
-<pre class="mermaid" style="display: flex; justify-content: center; margin: 40px 0; background: transparent; border: none;">
+<pre class="mermaid" style="display: flex; justify-content: center; margin: 60px 0; background: transparent; border: none; transform: scale(1.2);">
 sequenceDiagram
     actor S as Scientist
     participant UI as Streamlit
