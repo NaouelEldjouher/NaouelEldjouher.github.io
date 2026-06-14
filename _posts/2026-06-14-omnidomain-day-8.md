@@ -4,7 +4,7 @@ date: 2026-06-14
 tags: [omnidomain, fastapi, jwt, pydantic, pytest]
 ---
 
-The data layer is done — session, models, repository, migrations. This week I built what sits on top of it: the FastAPI application, authentication, and the first real routes.
+Data layer done. Next: the FastAPI application, authentication, and the first real routes.
 
 The goal was to wire the full request path end to end. A scientist sends a POST request, gets back a run ID. That means: validate the request, authenticate the user, call the service, call the repository, submit to AWS Batch, return a response. Every layer doing exactly one thing.
 
