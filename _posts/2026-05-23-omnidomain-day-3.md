@@ -1,31 +1,151 @@
 ---
 layout: post
-title: "Post 3: First HiFi Assembly: A Complete Chloroplast"
+title: "Post 3: PhytoFlow — First HiFi Assembly and How the Pipeline Routes Itself"
 date: 2026-05-23
-tags: [nextflow, aws, architecture, omniDomain]
+tags:
+  - nextflow
+  - aws
+  - architecture
+  - omniDomain
+  - plantgenomics
+  - hifi
 ---
 
-Assembling plant organelle genomes is harder than it looks — most 
-pipelines aren't built for it. Here's how PhytoFlow handled its first 
-real HiFi dataset and what the results revealed about the pipeline's 
-design.
+PhytoFlow is the plant genome assembly and annotation module of 
+OmniDomain, a cloud-native multi-kingdom genomics platform. It 
+takes raw PacBio HiFi reads and produces a fully annotated genome, 
+assembly, repeat masking, gene prediction, and functional annotation 
+with GO terms. All automated, all on AWS.
 
-Stub tests on PhytoFlow and FungalFlow caught architecture bugs early — 
-Nextflow 26 breaking changes, a params block in the wrong config file, 
-a Groovy reserved keyword. Fixed before any real data ran.
+The pipeline supports three modes. Two flags control everything. 
+The rest is automatic.
 
-With the pipeline clean, PhytoFlow assembled a complete *Arabidopsis* 
-chloroplast from 12,745 PacBio HiFi reads: 155,667 bp, 0 gaps, 100.8% 
-expected size. The metrics reflected the biology exactly — high coverage 
-with zero MapQ on the inverted repeats, 0% BUSCO because every BUSCO 
-gene is nuclear-encoded.
+---
 
-The user selects the genome type --genome_type organelle and the pipeline 
-automatically skips Helixer, MAKER, and NLR-Annotator. 
+## How PhytoFlow routes itself
 
-Baseline validated. Three things on the roadmap next:
-1️⃣ The 100.8% artifact — resolving the overlapping assembler ends to cleanly circularize to 100.0%
-2️⃣ Coverage saturation — at whole-genome scale, organelle coverage spikes to 5,000x+. Building a dynamic downsampler to prevent assembler crashes
-3️⃣ Structural isomers — the .gfa assembly graph captures the two orientations of the chloroplast that a flat .fasta hides. Planning to expose this output Baseline nailed. Now making it scale.
+<pre class="mermaid" style="display: flex; justify-content: center; margin: 40px 0; background: transparent; border: none;">
+graph TD
+    A[Input: HiFi Reads] --> B{genome_type?}
+    B -->|organelle| C[Hifiasm Assembly]
+    C --> D[Skip Annotation]
+    D --> E[BUSCO + Coverage QC]
+    E --> F[Complete chloroplast\n155,667bp, 0 gaps]
 
-Next: nuclear genome.
+    B -->|nuclear| G[Hifiasm Assembly]
+    G --> H{reference provided?}
+
+    H -->|No| I[Helixer]
+    I --> J[eggNOG-mapper]
+    J --> K[527 proteins\n62.6% annotated\nAGL18 detected]
+
+    H -->|Yes| L[RagTag Scaffolding]
+    L --> M[BRAKER3]
+    M --> N[eggNOG-mapper]
+    N --> O[770 proteins\n+46% vs Helixer]
+</pre>
+
+This post documents Case 1 — organelle mode. Cases 2 and 3 
+follow in the next posts.
+
+---
+
+## Architecture bugs caught before real data ran
+
+Before running any real data, stub tests on PhytoFlow and 
+FungalFlow caught several architecture bugs early:
+
+- Nextflow 26 breaking changes in process syntax
+- A `params` block placed in the wrong config file
+- A Groovy reserved keyword conflict in a process name
+
+All fixed before anything real ran. Catching bugs at the 
+architecture level — before compute costs accumulate — is one 
+of the core design principles of OmniDomain.
+
+---
+
+## The data
+
+12,745 PacBio HiFi reads from *Arabidopsis thaliana* 
+(ENA: ERR8666127). Organelle mode selected with a single flag: 
+`--genome_type organelle`.
+
+---
+
+## What the pipeline auto-detected
+
+`--genome_type organelle` triggered automatic configuration:
+
+- Helixer disabled — gene prediction is for nuclear genomes
+- MAKER disabled — same reason
+- NLR-Annotator disabled — disease resistance genes are nuclear
+- BUSCO run in organelle mode
+- Coverage QC applied with organelle thresholds
+
+No manual tool selection. No config editing.
+
+---
+
+## Assembly results
+
+Hifiasm assembled a complete *Arabidopsis* chloroplast:
+
+- **155,667bp** — 100.8% of the expected chloroplast size
+- **0 gaps** — fully contiguous
+- **0% BUSCO** — correct, because every BUSCO gene is 
+  nuclear-encoded. A 0% organelle BUSCO score is not a 
+  failure — it is the expected result.
+
+The 100.8% overshoot is a known assembler artifact from 
+overlapping ends at the circular junction. The assembly is 
+biologically correct — the overlap needs to be resolved to 
+produce a clean circularisation.
+
+---
+
+## What coverage reveals
+
+High coverage with zero MapQ on two regions — the inverted 
+repeats. This is the expected chloroplast signature. Inverted 
+repeats are identical sequences that exist twice in the 
+chloroplast genome. Reads mapping to them have zero mapping 
+quality because the aligner cannot distinguish which copy 
+they came from.
+
+The pipeline correctly identified and flagged these regions 
+without manual intervention.
+
+---
+
+## Three things on the roadmap
+
+**1. The 100.8% artifact**
+Resolving the overlapping assembler ends to cleanly circularise 
+to 100.0%. This requires trimming the duplicate junction sequence 
+and confirming the circular topology.
+
+**2. Coverage saturation**
+At whole-genome scale, organelle reads spike to 5,000x or higher. 
+Building a dynamic downsampler to prevent assembler crashes on 
+high-coverage organelle input.
+
+**3. Structural isomers**
+The `.gfa` assembly graph captures the two orientations of the 
+chloroplast large single-copy region — a biological reality that 
+a flat `.fasta` hides. Planning to expose this output for 
+downstream structural analysis.
+
+---
+
+Baseline validated. Next: nuclear genome — Case 2.
+
+---
+
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
+
+[← Back to Home](/)
