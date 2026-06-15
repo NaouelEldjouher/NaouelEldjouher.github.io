@@ -29,13 +29,12 @@ graph TD
     A[Input: HiFi Reads] --> B[--genome_type nuclear]
     B --> C[Hifiasm Assembly]
     C --> D[Coverage + MapQ QC]
-    D --> E{reference provided?}
-    E -->|No| F[Helixer gene prediction]
+    D --> F[Helixer gene prediction]
     F --> G[eggNOG-mapper]
     G --> H[527 proteins predicted\n62.6% annotated\nAGL18 detected]
-    E -->|Yes| I[RagTag + BRAKER3\nCase 3]
+    
+    style H fill:#2d5a27,color:#fff
 </pre>
-
 ---
 
 ## The data
