@@ -11,14 +11,24 @@ tags:
   - hifi
 ---
 
-PhytoFlow is the plant genome assembly and annotation module of 
-OmniDomain, a cloud-native multi-kingdom genomics platform. It 
-takes raw PacBio HiFi reads and produces a fully annotated genome, 
-assembly, repeat masking, gene prediction, and functional annotation 
-with GO terms. All automated, all on AWS.
+OmniDomain now has three new pipelines under active development: 
+PhytoFlow for plant genome assembly and annotation, FungalFlow 
+for fungal genome assembly and biosynthetic gene cluster discovery, 
+and MetaCflow for bacterial shotgun metagenomics and MAG recovery. 
+All three share the same AWS infrastructure, Terraform provisioning, 
+and Nextflow DSL2 architecture.
 
-The pipeline supports three modes. Two flags control everything. 
-The rest is automatic.
+Before running any real data, all three pipelines went through 
+stub testing — running the full pipeline graph with minimal inputs 
+to catch architecture bugs before any real compute ran. Three issues 
+surfaced across PhytoFlow and FungalFlow and were resolved: Nextflow 
+26 breaking changes in process syntax, a `params` block placed in 
+the wrong config file, and a Groovy reserved keyword conflict in a 
+process name.
+
+In this post I introduce PhytoFlow and document its first real 
+validation run,assembling a complete *Arabidopsis* chloroplast 
+from PacBio HiFi reads.
 
 ---
 
